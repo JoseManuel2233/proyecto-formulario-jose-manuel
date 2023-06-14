@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en_GB">
+<head>
+<title>CHANGE THE TITLE</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="Keywords" content="formulario">
+<meta name="description" content="formularios para la tercera edad">
+
+
+<style type="text/css">
+
+*{
+    box-sizing: border-box;
+    margin: 0px;
+}
+
+
+header, footer{
+    padding: 1em;
+    background-color: lightcyan;
+    display: flex;
+}
+
+header{
+    border-bottom: 3px solid black;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+body{
+  
+    background-color: beige;
+    flex-direction: column;
+    display: flex;
+    min-height: 100vh;
+}
+
+main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+h1{
+    text-align: center;
+    font-size: 2em;
+    font-weight: bold;
+    font-style: italic;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+h2{
+    text-align: center;
+    font-size: 1.3em;
+    color: crimson;
+    margin-bottom: 2em;
+}
+
+/*FORMULARIO*/
+
+form{
+   
+    border: 2px black solid;
+    background-color: burlywood;
+    padding: 4em;
+    max-width: 800px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+
+form p{
+    margin-bottom: 1em;
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+}
+
+fieldset{
+    padding: 2em;
+}
+
+/*FOOTER*/
+
+footer{
+    border-top: 3px solid black;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 3em;
+}
+
+footer > section:first-of-type{
+    font-weight: bold;
+}
+
+footer > section:first-of-type > div > p{
+color: brown;
+font-weight: normal;
+font-size: 1.1em;
+
+}
+
+footer > section:last-of-type{
+    font-style: italic;
+
+}
+
+footer > section:last-of-type > div > p{
+color: brown;
+font-style: normal;
+font-size: 1.1em;
+
+}
+
+
+footer section div p::after{
+    content: ':';
+}
+
+footer a{
+    text-decoration: none;
+}
+</style>
+</head>
+
+<body>
+    <header>LOS LADRONZUELOS DE BICICLETAS</header>
+        <h1>Parte</h1>
+
+            <main>
+
+                <form name="formulario" method="post" enctype="multipart/form-data" action="procesar.php">
+                    <h2>BICICLETA</h2>
+                <fieldset>
+                        <p>
+                            <label for id="birthday">Fecha:</label>
+                            <input tabindex="1" type="date" id="birthday" name="birthday" autofocus>
+                        </p>
+
+                        <p>
+                            <label for="appt">Elija hora:</label>
+                            <input tabindex="4" type="time" id="appt" name="appt">
+                        <p>
+
+                        <p>
+                            <label for="colorbicicleta">Color:</label>
+                            <input tabinindex="3" type="color" value="#FF0000" name ="colorbicicleta" id ="colorbicicleta">
+                        
+                        </p>
+
+                        <p>
+                            <label for="precio">rango de precio:</label>
+                            <input tabindex="2" type="range" value="red" name = "precio" id = "precio" min="100" max="1000">
+                        
+                        </p>
+                        
+                        <p>Tipo de bicicletas:</p>
+
+                        <p>
+                            <label for="paseo">Paseo</label>
+                            <select name="paseo" id = "paseo">
+                                <option value ="1">Señorial</option>
+                                <option value ="2">Anti-plebeyos</option>
+                                <option value ="3">PorEncimaDelHombro</option>
+                            </select>
+                        </p>
+                        
+                        <p>
+                            <label for="montaña">Montaña</label>
+                            <select name="montaña" id = "montaña">
+                                <option value ="1">Gamusinos</option>
+                                <option value ="2">Hueleflores</option>
+                                <option value ="3">Fango lover</option>
+                            </select>
+                        </p>
+                        
+
+                        <p>
+                            <label for="carrera">Carrera</label>
+                            <select name="carrera" id = "carrera">
+                                <option value ="1">Metroymedio</option>
+                                <option value ="2">3 de la tarde. Fluorescente edition</option>
+                                <option value ="3">Grupitors</option>
+                            </select>
+                        </p>
+                    
+                        <p>
+                        <label for="accesorios">Accesorios:</label>
+
+                        <select multiple name="accesorios" id="accesorios">
+                            <option>Ruedines</option>
+                            <option>Pegatinas</option>
+                            <option>Cestitas</option>
+                            <option>Bomba de aire</option>
+                            <option>Timbre</option>
+                            <option>Foco</option>
+                          </select>
+                        </p>
+                          
+                          
+
+                        <p>
+                        <label for="browser">¿Qué marca era?:</label>
+                        <input list="browsers" name="browser" id="browser" placeholder = "escriba el modelo">
+                        <datalist id="browsers">
+                          
+                                <option value ="specialized">
+                                <option value ="trek">
+                                <option value ="merida">
+                                <option value ="scott">
+                                <option value ="giant">
+                                <option value ="cube">
+                                <option value ="lapierre">
+                                <option value ="orbea">
+                                <option value ="cannondale">
+                                <option value ="bmc">
+                                <option value ="canyon">
+                                <option value ="look">
+                                <option value ="protek">
+                                <option value ="megamo">
+                                <option value ="pinarello">
+                                <option value ="bianchi">
+                                <option value ="bh">
+                                <option value ="factor">
+                                <option value ="ghost">
+                                <option value ="cervélo">
+                                <option value ="argon">
+      
+                        </datalist>
+
+                       </p>
+
+
+                        <p>
+                            <input type="submit" value="Enviar">
+                        </p>
+
+                        <p>
+                            <input type="reset" value="Limpiar formulario">
+                        </p>
+
+                </fieldset>
+                </form>
+        </section>
+    </main>
+
+    <footer>
+        <section>
+            <div><p>Dirección</p></div>
+            <p>calle Pompeyo, 2</p>
+            <p>Oviedo, Asturias</p>
+        </section>
+
+        <section>
+        <div><p>Datos de contacto</p></div>
+            <p>984 25 83 34</p>
+            <p>672 784 112</p>
+            <p><a href="#">policia_asturias@gmail.com</a></p>
+        </section>
+
+    </footer>
+</body>
+
+</html>

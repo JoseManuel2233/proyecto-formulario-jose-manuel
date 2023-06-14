@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en_GB">
+<head>
+<title>CHANGE THE TITLE</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="Keywords" content="formulario">
+<meta name="description" content="formularios para la tercera edad">
+
+
+<style type="text/css">
+
+*{
+    box-sizing: border-box;
+    margin: 0px;
+}
+
+
+header, footer{
+    padding: 1em;
+    background-color: lightcyan;
+    display: flex;
+}
+
+header{
+    border-bottom: 3px solid black;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+body{
+  
+    background-color: beige;
+    flex-direction: column;
+    display: flex;
+    min-height: 100vh;
+}
+
+main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+h1{
+    text-align: center;
+    font-size: 2em;
+    font-weight: bold;
+    font-style: italic;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+h2{
+    text-align: center;
+    font-size: 1.3em;
+    color: crimson;
+    margin-bottom: 2em;
+}
+
+/*FORMULARIO*/
+
+form{
+   
+    border: 2px black solid;
+    background-color: burlywood;
+    padding: 4em;
+    max-width: 800px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+form section label::after{
+    content: ":";
+}
+
+form > section > p{
+    margin-bottom: 1em;
+}
+
+form p{
+    margin-bottom: 1em;
+    display: flex;
+    justify-content: space-between;
+}
+
+fieldset{
+    padding: 2em;
+}
+
+/*FOOTER*/
+
+footer{
+    border-top: 3px solid black;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 3em;
+}
+
+footer > section:first-of-type{
+    font-weight: bold;
+}
+
+footer > section:first-of-type > div > p{
+color: brown;
+font-weight: normal;
+font-size: 1.1em;
+
+}
+
+footer > section:last-of-type{
+    font-style: italic;
+
+}
+
+footer > section:last-of-type > div > p{
+color: brown;
+font-style: normal;
+font-size: 1.1em;
+
+}
+
+
+footer section div p::after{
+    content: ':';
+}
+
+footer a{
+    text-decoration: none;
+}
+</style>
+</head>
+
+<body>
+    <header>El club de la tercera edad de Entrepenes</header>
+        <h1>rellena nuestro formulario de admisión</h1>
+
+            <main>
+
+                <form name="formulario" method="post" enctype="multipart/form-data" action="procesar.php">
+                    <h2>FORMULARIO</h2>
+                <fieldset>
+                    <section>
+                        <p>
+                            <label for="nombre">Nombre</label>
+                            <input tabindex="1" type="text" name="nombre" id="nombre" placerholder="Escriba su nombre" autocomplete="on" autofocus>
+                        </p>
+
+                        <p>  
+                            <label for="primer-apellido">Primer apellido</label>
+                            <input tabindex="3" type="text" name="primer-apellido" id="primer-apellido" placeholder="Escriba su primer apellido" autocomplete="on">
+                        </p>
+
+                        <p>
+                            <label for="segundo-apellido">Segundo apellido</label>
+                            <input tabindex="2" type="text" name="segundo-apellido" id="segundo-apellido" placeholder="Escriba su segundo apellido" autocomplete="on">
+                        </p>
+                        
+                        <p>
+                            <label for="edad">Edad</label>
+                            <input type="number" name="edad" id="edad" min="18" max="80">
+                        </p>
+                    
+                    </section>
+                        <p>Indique su sexo:</p>
+                        <p>
+        
+                            <label for="male">Hombre</label>
+                            <input type="radio" id="male" name="gender" value="hombre">
+
+                        </p>
+
+                        <p>
+        
+                            <label for="female">Mujer</label>
+                            <input type="radio" id="female" name="gender" value="mujer">
+
+                        </p>
+
+                        <p>
+        
+                            <label for="others">Otros</label>
+                            <input type="radio" id="others" name="gender" value="otros">
+
+                        </p>
+
+                    <section>
+
+                        <p>
+                            <label for="email">Email</label>
+                            <input type ="email" name="email" id="email">
+                        </p>
+
+                        <p>
+                            <label for="teléfono">Teléfono</label>
+                            <input type ="number" name="teléfono" id="telephon">
+                        </p>
+
+                        <p>
+                            <input type="submit" value="Enviar">
+                        </p>
+
+                        <p>
+                            <input type="reset" value="Limpiar formulario">
+                        </p>
+
+                    </section>
+                </fieldset>
+                </form>
+        </section>
+    </main>
+
+    <footer>
+        <section>
+            <div><p>Dirección</p></div>
+            <p>calle Pelayo, 1</p>
+            <p>Oviedo, Asturias</p>
+        </section>
+
+        <section>
+        <div><p>Datos de contacto</p></div>
+            <p>984 23 83 19</p>
+            <p>672 832 230</p>
+            <p><a href="#">entrepenes_asturisa@gmail.com</a></p>
+        </section>
+
+    </footer>
+</body>
+
+</html>
